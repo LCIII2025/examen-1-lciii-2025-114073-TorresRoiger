@@ -24,6 +24,14 @@ public class EstacionamientoTest {
     @Test
     public void testCalcularPrecio() throws Exception {
         // TODO test
+        Vehiculo vehiculo = new Vehiculo("123", "ModeloTest", Vehiculo.Tipo.AUTO);
+        Cliente cliente = new Cliente("dni123", "Fran");
+        Ticket ticket = new Ticket(cliente, vehiculo);
+
+        double precio = ticket.calcularPrecio();
+
+        double horas = Math.ceil(ticket.calcularMinutos() / 60.0);
+        assertEquals(100.0 * horas, precio);
     }
 
 }

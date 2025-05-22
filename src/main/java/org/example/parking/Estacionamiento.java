@@ -43,6 +43,7 @@ public class Estacionamiento {
         }
 
         ticket.marcarSalida();
+        vehiculosEstacionados.remove(patente);
 
         return ticket;
     }
