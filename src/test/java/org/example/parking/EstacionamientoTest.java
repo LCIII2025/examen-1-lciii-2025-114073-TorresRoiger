@@ -28,6 +28,8 @@ public class EstacionamientoTest {
         Cliente cliente = new Cliente("dni123", "Fran");
         Ticket ticket = new Ticket(cliente, vehiculo);
 
+        ticket.marcarSalida();
+
         double precio = ticket.calcularPrecio();
 
         double horas = Math.ceil(ticket.calcularMinutos() / 60);
