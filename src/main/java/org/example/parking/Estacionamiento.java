@@ -22,7 +22,7 @@ public class Estacionamiento {
 
         Cliente cliente = clientesRegistrados.get(dni);
 
-        if (cliente.equals(null)) {
+        if (cliente == null) {
             cliente = new Cliente(dni, nombre);
             clientesRegistrados.put(dni, cliente);
         }

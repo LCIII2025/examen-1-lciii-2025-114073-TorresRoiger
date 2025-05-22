@@ -30,8 +30,8 @@ public class EstacionamientoTest {
 
         double precio = ticket.calcularPrecio();
 
-        double horas = Math.ceil(ticket.calcularMinutos() / 60.0);
-        assertEquals(100.0 * horas, precio);
+        double horas = Math.ceil(ticket.calcularMinutos() / 60);
+        assertEquals(100 * horas, precio);
     }
 
 }
